@@ -56,7 +56,7 @@ class ExamDetailInfo(models.Model):
     account = models.CharField('科目', max_length=10)
     score = models.IntegerField('分数')
     remark = models.CharField('备注', max_length=100)
-    ExamInfo = models.ForeignKey("ExamInfo", on_delete=models.CASCADE, verbose_name='考试详情')
+    Student = models.ForeignKey("Student", on_delete=models.CASCADE, verbose_name='考试详情')
 
     class Meta:
         verbose_name = '考试详情1'
